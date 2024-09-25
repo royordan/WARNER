@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Contacto - Warner Bros Tour</title>
+    <meta name="viewport" content="width= device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="estilos.css">
+</head>    
+
+<body>
+    <header> 
+        <a href="index.html"><img class="letra" src="letra.png"></a>
+        <a href="#" onclick="MiFuncion();" class="icono"><i class="fa fa-bars" aria-hidden="true"></i></a>
+        <nav id="navegador" class=" ">
+            <ul>
+                <li><a href="localidades.html">Locación</a></li>
+                <li><a href="tickets.html">Tickets</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <footer> 
+        <div class="footer-container"> 
+            <div class="contact-info">
+                <h1>Contacto</h1>
+                <p>Terminos y condiciones</p>
+                <p>Politica de privacidad</p>
+                <p>Preguntas frecuentes</p>
+            </div>
+
+            <div class="footer-bottom">
+                <p>@2024 Warner Bros Studio Tour. Todos los derechos reservados</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function MiFuncion(){//aqui se define el ID del elemento que se va a tomar la clase 
+            var x = document.getElementById("navegador")}
+            if (x.className === " ") {//esta es la clase que se agrega al elemento con eo id="navegador"
+                x.className == "responsive";} else {x.className = " ";}
+    </script>
+</body>
+</html>
