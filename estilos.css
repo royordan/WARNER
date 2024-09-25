@@ -10,6 +10,17 @@ img {max-width: 100%;}
 .letra {width: 10%; display: flex; text-align: left;}
 .logo {width: 600px; margin: 2px;}
 
+.cajafoto1 {display: flex; flex-flow: wrap; align-items: center;}
+.foto1 {width: 50%; display: flex; text-align: left;}
+.foto2 {width: 50%; text-align: right;}
+.cajafoto2 {display: flex; flex-flow: wrap; align-items: center;}
+.foto3 {width: 50%; display: flex; text-align: left;}
+.foto4 {width: 50%; text-align: right;}
+.cajafoto3 {display: flex; flex-flow: wrap; align-items: center;}
+.foto5 {width: 50%; display: flex; text-align: left;}
+.foto6 {width: 50%; text-align: right;}
+
+
 div {text-align: center;}
 h1 {font-family: "Roboto Slab", serif; font-optical-sizing: auto; font-weight: 800; font-style: normal; text-align: center;}
 h2 {font-family: "Roboto Slab", serif; font-optical-sizing: auto; font-weight: weight; font-style: normal; text-align: center;}
@@ -28,4 +39,3 @@ footer {font-family: "Roboto Slab", serif; font-optical-sizing: auto; font-weigh
 .caja img {width: 90%; padding: 5%;}
 .tour {width: 300px}
 
-@media(min-width:1024px){nav {display:block}}
