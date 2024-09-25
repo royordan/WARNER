@@ -9,21 +9,29 @@ nav ul li a {padding: 10px; background-color: lightblue; color: #FFF; display: b
 img {max-width: 100%;}
 .letra {width: 10%; display: flex; text-align: left;}
 .logo {width: 600px; margin: 2px;}
+.icono {padding: 20px; color: black; text-decoration: none;} 
 
 .cajafoto1 {display: flex; flex-flow: wrap; align-items: center;}
+.cajafoto1 div {width: 100%; text-align: center;}
 .foto1 {width: 50%; display: flex; text-align: left;}
 .foto2 {width: 50%; text-align: right;}
+.video1 {width: 50%; display: flex; text-align: left;}
 .cajafoto2 {display: flex; flex-flow: wrap; align-items: center;}
+.cajafoto2 div {width: 100%; text-align: center;}
 .foto3 {width: 50%; display: flex; text-align: left;}
 .foto4 {width: 50%; text-align: right;}
+.video2 {width: 50%; display: flex; text-align: left;}
 .cajafoto3 {display: flex; flex-flow: wrap; align-items: center;}
+.cajafoto3 div {width: 100%; text-align: center;}
 .foto5 {width: 50%; display: flex; text-align: left;}
 .foto6 {width: 50%; text-align: right;}
+.video3 {width: 50%; display: flex; text-align: left;}
 
 
 div {text-align: center;}
 h1 {font-family: "Roboto Slab", serif; font-optical-sizing: auto; font-weight: 800; font-style: normal; text-align: center;}
 h2 {font-family: "Roboto Slab", serif; font-optical-sizing: auto; font-weight: weight; font-style: normal; text-align: center;}
+h3 {font-family: "Roboto Slab", serif; font-optical-sizing: auto; font-weight: weight; font-style: normal; text-align: center;}
 p {font-family: "Roboto Slab", serif; font-optical-sizing: auto; font-weight: weight; font-style: normal; text-align: center;}
 a {font-family: "Roboto Slab", serif; font-optical-sizing: auto; font-weight: weight; font-style: normal; text-align: center;}
 .iframe-conteiner {position: relative; width: 100%; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%;}
