@@ -12,29 +12,25 @@
     <link rel="stylesheet" href="estilos.css">
     <meta charset="UTF-8">
 </head>    
-
 <body>
     <header> 
         <a href="index.html"><img class="letra" src="letra.png"></a>
-
-        <div class="slider">
-            <div class="mySlides"><img src="slide1.png" style="width: 100%" alt="Slide 1"></div>
-            <div class="mySlides"><img src="slide2.png" style="width: 100%" alt="Slide 2"></div>
-            <div class="mySlides"><img src="slide3.png" style="width: 100%" alt="Slide 3"></div>
-            <div class="mySlides"><img src="slide4.png" style="width: 100%" alt="Slide 4"></div>
-            <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
-            <button class="next" onclick="moveSlide(1)">&#10095;</button>
-        </div>
-        <nav id="navegador" class=" ">
+        <nav id="navegacion" class="navbar">
             <ul>
                 <li><a href="localidades.html">Locación</a></li>
                 <li><a href="tickets.html">Tickets</a></li>
                 <li><a href="contacto.html">Contacto</a></li>
             </ul>
-        </nav>
     </header>
+    <div class="slider">
+        <div class="mySlides"><img src="slide1.png" style="width: 100%" alt="Slide 1"></div>
+        <div class="mySlides"><img src="slide2.png" style="width: 100%" alt="Slide 2"></div>
+        <div class="mySlides"><img src="slide3.png" style="width: 100%" alt="Slide 3"></div>
+        <div class="mySlides"><img src="slide4.png" style="width: 100%" alt="Slide 4"></div>
+        <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+        <button class="next" onclick="moveSlide(1)">&#10095;</button>
+    </div>
     <main>
-       
         <div>
             <h1> EXPLORA LA MAGIA DEL CINE EN WARNER BROS STUDIO</h1>
             <h2> NUESTROS TOURS</h2>
@@ -45,16 +41,15 @@
 
         <div class="cajafoto1">
             <img class="foto1" src="WarnerBros.EEUU.jpg" alt="studio">
-            <img class="foto2" src="mapa eeuu.PNG" alt="mapa">
             <div>
                 <p>EEUU</p>
                 <a href="localidades.html">ver más</a>
             </div>
         </div>
         
+
         <div class="cajafoto2">
             <img class="foto3" src="WarnerBros.Londres.jpg" alt="guia">
-            <img class="foto4" src="mapa londres.PNG" alt="mapa">
             <div>
                 <p>Londres</p>
                 <a href="localidades.html">ver más</a>
@@ -63,7 +58,6 @@
 
         <div class="cajafoto3">
             <img class="foto5" src="WarnerBros.Japon.jpg" alt="tour">
-            <img class="foto6" src="mapa japon.PNG" alt="mapa">
             <div>
                 <p>Japon</p>
                 <a href="localidades.html">ver más</a>
@@ -76,6 +70,8 @@
         </div>
 
     </main>
+
+    <iframe src="archivo.html" name="marco" frameborder="0" scrolling="no"></iframe>
 
     <footer> 
         <div class="footer-container"> 
