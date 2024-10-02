@@ -63,7 +63,12 @@ footer {font-family: "Roboto Slab", serif; font-optical-sizing: auto; font-weigh
 .caja img {width: 90%; padding: 5%;}
 .tour {width: 300px}
 
+.anunciorv {width: 300px; height: 600px; object-fit: cover; justify-content: center;}
+.cajacontanuncio {display: flex; justify-content: center;}
+
+
 @media 
 (max-width: 768px) {.slider {max-width: 90%;}}
 @media 
-(min-width: 769px) {.slider {max-width: 600px;}}
+(min-width: 769px) {.slider {max-width: 600px;} .anunciorv {width: 728px; height: 90px; object-fit: cover;}}
+
