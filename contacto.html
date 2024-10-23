@@ -22,23 +22,36 @@
                 <li><a href="contacto.html">Contacto</a></li>
             </ul>
         </nav>
+        <button class="menu-toggle" aria-label="Toggle Menu">&#9776;</button>
     </header>
     
     <footer> 
-        <div class="footer-container"> 
-            <div class="contact-info">
-                <h1>Contacto</h1>
-                <p>Terminos y condiciones</p>
-                <p>Politica de privacidad</p>
-                <p>Preguntas frecuentes</p>
+        <div class="footer-container"></div>
+            <div class="logo"><img src="logo.png"></div>
+            <div class="datos">
+                <h4>Warner Bros Studios Tours</h4>
+                <ul>
+                    <li><i class="fa fa-envelope-o" aria-hidden="true"></i> studio.tour@wbd.com</li>
+                    <li><i class="fa fa-clock-o" aria-hidden="true"></i></i> Horario: 8:30 AM - 3:30 PM</li>
+                    <li><i class="fa fa-phone" aria-hidden="true"></i></i> +1 (818) 977 8687</li>
+                </ul>
             </div>
-
-            <div class="footer-bottom">
-                <p>@2024 Warner Bros Studio Tour. Todos los derechos reservados</p>
+            <div class="links">
+                <h4>Enlaces Rápidos</h4>
+                <ul>
+                    <li><a href="localidades.html">Locación</a></li>
+                    <li><a href="tickets.html">Tickets</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
             </div>
         </div>
+        <div class="copy"><p>@2024 Warner Bros Studio Tour. Todos los derechos reservados.</p></div>
     </footer>
 
+    <script>
+        document.querySelector('.menu-toggle').addEventListener('click', function () 
+        {document.querySelector('.navbar').classList.toggle('active');});
+    </script>
     <script>
         function MiFuncion(){var x = document.getElementById("navegador")}
             if (x.className === " ") {x.className == "responsive";} else {x.className = " ";}

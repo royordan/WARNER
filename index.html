@@ -21,6 +21,8 @@
                 <li><a href="tickets.html">Tickets</a></li>
                 <li><a href="contacto.html">Contacto</a></li>
             </ul>
+        </nav>
+        <button class="menu-toggle" aria-label="Toggle Menu">&#9776;</button>
     </header>
     <div class="slider">
         <div class="mySlides"><img src="slide1.png" style="width: 100%" alt="Slide 1"></div>
@@ -37,32 +39,45 @@
             <a href="inicio.html"></a>
         </div>
 
-        <h1>Locación</h1>
-
-        <div class="cajafoto1">
-            <img class="foto1" src="WarnerBros.EEUU.jpg" alt="studio">
-            <div>
-                <p>EEUU</p>
-                <a href="localidades.html">ver más</a>
+        <div class="locacionhome">
+            <div class="containercard">
+                <div class="card">
+                    <div class="poster">
+                        <img src="WarnerBros.EEUU.jpg" alt="Warner Bros Estados Unidos">
+                    </div>
+                    <div class="detalle">
+                        <p>Experimente la magia de Hollywood y vea dónde se hicieron sus películas favoritas durante esta visita guiada por Warner Bros. Studio. Únase a su guía y a un pequeño grupo para explorar los escenarios de los sonidos y de fondo. Conozca la tecnología de la pantalla verde.</p>
+                    </div>
+                </div>
+                <p class="pais">EE.UU</p>
             </div>
+
+            <div class="containercard">
+                <div class="card">
+                    <div class="poster">
+                        <img src="WarnerBros.Japon.jpg" alt="Warner Bros Japón">
+                    </div>
+                    <div class="detalle">
+                        <p>Visite decorados auténticos, descubre la magia de los efectos especiales y todos los secretos de las películas de Harry Potter. En los estudios donde se crearon las ocho películas, presenta todo el talento, la imaginación y el arte empleados para convertir lo imposible en realidad en la pantalla. Revivirá la magia a través de los ojos de los creadores de las películas de Harry Potter. </p>
+                    </div>
+                </div>
+                <p class="pais">Londres</p>
+            </div>
+
+            <div class="containercard">
+                <div class="card">
+                    <div class="poster">
+                        <img src="WarnerBros.Londres.jpg" alt="Warner Bros Londres">
+                    </div>
+                    <div class="detalle">
+                        <p>Explore los escenarios más emblemáticos y descubre cómo se hizo realidad la magia. Lejos de ser un parque de atracciones, sorpréndase con el detrás de escena y observe los detalles de la creación de una franquicia innovadora y mundialmente conocida..</p>
+                    </div>
+                </div>
+                <p class="pais">Japón</p>
+            </div>
+
         </div>
         
-
-        <div class="cajafoto2">
-            <img class="foto3" src="WarnerBros.Londres.jpg" alt="guia">
-            <div>
-                <p>Londres</p>
-                <a href="localidades.html">ver más</a>
-            </div>
-        </div>
-
-        <div class="cajafoto3">
-            <img class="foto5" src="WarnerBros.Japon.jpg" alt="tour">
-            <div>
-                <p>Japon</p>
-                <a href="localidades.html">ver más</a>
-            </div>
-        </div>
 
         <div>
             <h2>COMPRA TUS ENTRADAS</h2>
@@ -76,36 +91,45 @@
     </div>
 
     <footer> 
-        <div class="footer-container"> 
-            <div class="contact-info">
-                <h1>Contacto</h1>
-                <p>Terminos y condiciones</p>
-                <p>Politica de privacidad</p>
-                <p>Preguntas frecuentes</p>
+        <div class="footercontainer"></div>
+            <div class="logo"><img src="logo.png"></div>
+            <div class="datos">
+                <h4>Warner Bros Studios Tours</h4>
+                <ul>
+                    <li><i class="fa fa-envelope-o" aria-hidden="true"></i> studio.tour@wbd.com</li>
+                    <li><i class="fa fa-clock-o" aria-hidden="true"></i></i> Horario del tour: 8:30 AM - 3:30 PM</li>
+                    <li><i class="fa fa-phone" aria-hidden="true"></i></i> +1 (818) 977 8687</li>
+                </ul>
             </div>
-
-            <div class="footer-bottom">
-                <p>@2024 Warner Bros Studio Tour. Todos los derechos reservados</p>
+            <div class="links">
+                <h4>Enlaces Rápidos</h4>
+                <ul>
+                    <li><a href="localidades.html">Locación</a></li>
+                    <li><a href="tickets.html">Tickets</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
             </div>
         </div>
+        <div class="copy"><p>@2024 Warner Bros Studio Tour. Todos los derechos reservados.</p></div>
     </footer>
 
+    <script>
+        document.querySelector('.menu-toggle').addEventListener('click', function () 
+        {document.querySelector('.navbar').classList.toggle('active');});
+    </script>
     <script>
         function MiFuncion(){var x = document.getElementById("navegador")}
             if (x.className === " ") {x.className == "responsive";} else {x.className = " ";}
     </script>
     <script src="script.js"></script>
-   <script>
-    let slideIndex = 0; let slideInterval; showSlides(); 
-    function moveSlide(n) {slideIndex += n; showSlides(); resetInterval();}
-    function showSlides() {let slides = document.getElementsByClassName("mySlides");
-        if (slideIndex >= slides.length) {slideIndex = 0;} 
-        if (slideIndex < 0) {slideIndex = slides.length - 1;}
-        for (let i = 0; i < slides.length; i++) {slides[i].style.display = "none";}
-        slides[slideIndex].style.display = "block";}
-    function startInterval() {slideInterval = setInterval(() => {slideIndex++; showSlides();}, 3000);}
-    function resetInterval() { clearInterval(slideInterval); startInterval();}
-    startInterval();
-</script>
+    <script>
+        let slideIndex = 0; showSlides();
+        function showSlides() {let slides = document.getElementsByClassName("mySlides");
+            for (let i = 0; i < slides.length; i++) {slides[i].style.display = "none";}
+            slideIndex++;
+            if (slideIndex > slides.length) { slideIndex = 1 }
+            slides[slideIndex - 1].style.display = "block"; setTimeout(showSlides, 2000); }
+        function moveSlide(n) {showSlides(slideIndex += n);}
+    </script>
 </body>
 </html>
