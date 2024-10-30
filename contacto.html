@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/lightbox.css">
+    <link rel="stylesheet" href="css/lightbox.min.css">
     <link rel="stylesheet" href="estilos.css">
 </head>    
 
@@ -25,12 +25,32 @@
         </nav>
         <button class="menu-toggle" aria-label="Toggle Menu">&#9776;</button>
     </header>
-    
-        <div class="cajagaleria">
-            <a href="hollywoodgrande.jpg" data-lightbox="fotos" title="Warner EE.UU">
-                <img src="hollywoodpequeña.jpg">
-            </a>
-        </div>
+   
+    <div>
+        <h1>EXPLORA LOS INCREÍBLES TOURS</h1>
+        <a href="inicio.html"></a>
+    </div>
+
+    <div class="cajagaleria">
+        <a href="entradagrande.jpg" data-lightbox="fotos" title="Warner Londres">
+            <img src="entradachica.jpg" width="375" height="279">
+        </a>
+        <a href="tourgrande.jpg" data-lightbox="fotos" title="Warner EE.UU">
+            <img src="tourchica.jpg" width="375" height="279">
+        </a>
+        <a href="busgrande.jpg" data-lightbox="fotos" title="Warner Japón">
+            <img src="buschico.jpg" width="375" height="279">
+        </a>
+        <a href="comedorgrande.jpg" data-lightbox="fotos" title="Warner Londres">
+            <img src="comedorchico.jpg" width="375" height="279">
+        </a>
+        <a href="friendsgrande.jpg" data-lightbox="fotos" title="Warner EE.UU">
+            <img src="friendschica.jpg" width="375" height="279">
+        </a>
+        <a href="castillogrande.jpg" data-lightbox="fotos" title="Warner Japón">
+            <img src="castillochico.jpg" width="375" height="279">
+        </a>
+    </div>
     
     <footer> 
         <div class="footer-container"></div>
@@ -63,6 +83,6 @@
         function MiFuncion(){var x = document.getElementById("navegador")}
             if (x.className === " ") {x.className == "responsive";} else {x.className = " ";}
     </script>
-    <script src="js/lightbox.js"></script>
+    <script src="js/lightbox-plus-jquery.min.js"></script>
 </body>
 </html>
