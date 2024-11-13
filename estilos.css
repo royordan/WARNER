@@ -44,7 +44,6 @@ img {max-width: 100%;}
 .card:hover .detalle {bottom: 0;}
 .pais {text-align: center; margin-top: 10px; font-size: 30px; font-weight: 500;}
 
-
 .sidebar-ad {width: 300px; height: 250px; margin: 20px auto;}
 .banner-ad img {max-width: 100%; height: auto;}
 
@@ -58,7 +57,6 @@ h4 {font-family: "Roboto Slab", serif; font-optical-sizing: auto; font-weight: w
 p {font-family: "Roboto Slab", serif; font-optical-sizing: auto; font-weight: weight; font-style: normal; text-align: center; margin: 10px 0;}
 a {font-family: "Roboto Slab", serif; font-optical-sizing: auto; font-weight: weight; font-style: normal; text-align: center;}
 
-
 footer {font-family: "Roboto Slab", serif; padding: 20px; background: #AFC1D6; color: #fff;}
 .footercontainer {display: flex; justify-content: space-between; align-items: center;}
 .logo img {max-width: 100px;}
@@ -66,6 +64,8 @@ footer {font-family: "Roboto Slab", serif; padding: 20px; background: #AFC1D6; c
 .datos ul, .links ul {list-style-type: none; padding: 0;}
 .datos li, .links li {margin-bottom: 10px;}
 .links a {color: #fff; text-decoration: none;}
+.links ul {list-style-type: disc; padding-left: 20px;}
+.links h4 {list-style-type: none; margin: 0;}
 .copy {text-align: center; padding-top: 20px; font-size: 14px; border-top: 1px solid grey;}
 
 .imagencity { width: 50%;}
@@ -77,21 +77,48 @@ footer {font-family: "Roboto Slab", serif; padding: 20px; background: #AFC1D6; c
 .anunciorv {width: 300px; height: 600px; object-fit: cover; justify-content: center;}
 .cajacontanuncio {display: flex; justify-content: center; margin: 10px 0;}
 
-.main-container {display: flex; justify-content: center; align-items: flex-start; padding: 20px; }
+.formulario {background: none; padding: 20px; border-radius: 5px; box-shadow: 0 0 10 rgba(0, 0, 0, 0.1); max-width: 400px; margin: auto;}
+label {display: block; margin: 10px 0 5px;}
+select, input {width: 100%; padding: 8px; margin-bottom: 10px; border: 1px solid #AFC1D6; border-radius: 4px;}
+input[type="num-personas"] {width: 50px; padding: 5px; border: 1px solid #AFC1D6; border-radius: 4px; text-align: center;}
+
+.booking-container {max-width: 700px; margin: 0 auto; padding: 20px; background-color: none; border-radius: 8px; text-align: center;}
+.booking-container h4 {font-size: 16px; color: #707070; margin-bottom: 8px; font-weight: 400;}
+.booking-container select {width: 100%; padding: 12px; margin-bottom: 15px; border: 1px solid #ddd; border-radius: 5px; font-size: 16px;
+transition: border-color 0.3s; text-align: center;}
+.booking-container input[type="number"] {width: 150px; padding: 12px; margin-bottom: 15px; border: 1px solid #ddd; border-radius: 5px;
+font-size: 16px; transition: border-color 0.3s; text-align: center;}
+.booking-container input[type="number"]:focus {border-color: #AFC1D6;outline: none;}
+.booking-container select:focus {border-color: #AFC1D6; outline: none;}
+.booking-container input[type="date"] {width: 150px; padding: 12px; margin-bottom: 15px; border: 1px solid #ddd; border-radius: 5px;
+font-size: 16px; transition: border-color 0.3s; text-align: center;}
+.booking-container input[type="date"]:focus {border-color: #AFC1D6; outline: none;}
+.booking-container select#location {width: 150px; padding: 12px; margin-bottom: 15px; border: 1px solid #ddd; border-radius: 5px;
+font-size: 16px; transition: border-color 0.3s; text-align: center; }
+.booking-container select#location:focus {border-color: #AFC1D6; outline: none;}
+.booking-container #schedule-container ul {list-style: none; padding: 0; display: flex; flex-wrap: wrap; justify-content: center;}
+.booking-container #schedule-container li {display: flex; align-items: center; justify-content: center; margin: 4px 10px; width: auto; flex-basis: 45%;}
+.booking-container #schedule-container input[type="radio"] {margin: 0; padding: 0; width: 16px; height: 16px; flex-shrink: 0;}
+.booking-container #schedule-container label {font-size: 16px; color: #555; display: inline-block; margin-left: 5px; white-space: nowrap; line-height: 1.5;}
+.booking-container label {font-size: 16px; color: #555; display: flex; justify-content: space-between; align-items: center; width: 100%;}
+.booking-container button {width: 150px; padding: 10px; background-color: #AFC1D6; color: white; border: none; border-radius: 5px;
+font-size: 16px; cursor: pointer; transition: background-color 0.3s; font-weight: 600; margin: 0 auto; display: block; }
+.booking-container button:hover {background-color: #F2B819;}
+.booking-container p {font-size: 16px; color: #888; margin-top: 10px;}
+
+.main-container {display: flex; justify-content: center; align-items: flex-start; padding: 20px;}
 .tarjeta-imagen {max-width: 100%; height: auto; margin-right: 20px;}
 .form-container {display: flex; flex-direction: column; max-width: 400px; padding: 20px; color: #707070; margin-left: 20px;}
-.field-container {margin-bottom: 15px; }
+.field-container {margin-bottom: 15px;}
 .flex-row {display: flex; justify-content: center; align-items: center;}
 .flex-row:last-child {margin-top: 20px;}
 .flex-item {flex: 1; margin-right: 10px;}
-.flex-item:last-child {margin-right: 0; }
+.flex-item:last-child {margin-right: 0;}
 label {padding-bottom: 5px; font-size: 13px;}
-input {margin-top: 3px; padding: 15px; font-size: 16px; width: 100%;  border-radius: 3px; border: 1px solid #dcdcdc;}
-.boton-enviar {padding: 10px; font-size: 16px; background-color: #AFC1D6; color: white; border: none; border-radius: 5px; 
-cursor: pointer; width: 120px; }
-.boton-enviar:hover {background-color: #F2B819;}
-
-
+input {margin-top: 3px; padding: 15px; font-size: 16px; width: 100%; border-radius: 3px; border: 1px solid #dcdcdc;}
+.boton-enviar {padding: 10px; font-size: 16px; background-color: #AFC1D6; color: white; border: none; border-radius: 5px; cursor: pointer;
+width: 120px;}
+.boton-enviar:hover { background-color: #F2B819;}
 
 @media (max-width: 768px) 
 {
