@@ -14,13 +14,36 @@
 
     .slide {display: none; width: 100%; height: 100%; flex-shrink: 0; align-items: center; justify-content: center; text-align: center; z-index: 0;}
     .slide.active {display: flex; flex-direction: column;}
-    #slide1, #slide5 {background: url('fondo.png') no-repeat center center; background-size: cover; color: white;}
-    .slide3-images {display: flex; justify-content: center; align-items: center; gap: 20px; padding: 0 20px;}
-    .slide5 {display: flex; width: 100%; height: 100%; justify-content: center;}
+    #slide1, #slide6 {background: url('fondo.png') no-repeat center center; background-size: cover; color: white;}
+    #slide2 {box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1)}
+    .slide4-images, .slide5-images {display: flex; justify-content: center; align-items: center; gap: 20px; padding: 0 20px;}
+    .slide6 {display: flex; width: 100%; height: 100%; justify-content: center;}
+    #slide4 .compu {
+  width: 50%; /* Reduje el tamaño de la imagen de la computadora */
+  height: auto; /* Mantiene la proporción */
+}
+
 
     .compu, .movil {height: auto;}
     .compu {width: 70%;}
     .movil {width: 20%;}
+    
+    .cuadro {display: inline-block;  margin: 20px;  padding: 40px;  background: url('fondo.png') no-repeat center center;
+    background-size: cover; color: white; border-radius: 10px;box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); transition: box-shadow 0.3s ease; 
+    width: 100%; max-width: 600px; box-sizing: border-box; margin: 20px auto;}
+    #slide2 .cuadro:first-child {height: 200px; padding: 20px; }
+    .cuadro h2 {margin: 0; font-size: 2.5em; font-family: "Roboto Slab", serif; text-align: center;}
+    .cuadro p {text-align: center; font-size: 1.2em; font-family: "Roboto Slab", serif; margin-top: 10px; line-height: 1.6; word-wrap: break-word; 
+    max-width: 100%; margin: 10px auto; width: 100%; padding: 10px;}
+    .cuadro.objetivo {height: 500px; width: 100%; max-width: 600px; margin: 20px auto; padding: 25px; }
+
+    .circulos {display: flex; justify-content: center; gap: 70px; margin-top: 50px; }
+    .circulo-container {display: flex; justify-content: center; align-items: center; position: relative;}
+    .circulo {width: 200px; height: 200px; border-radius: 50%; background-color: #AFC1D6; display: flex; justify-content: center;  align-items: center; 
+    position: relative; text-align: center;}
+    #circulo2 {background-color: #F2B819;}
+    .text-above {position: absolute; top: -50px; font-size: 18px; color: black; text-align: center;}
+    .text-inside {font-size: 20px; color: white; margin: 0;}
 
     .link-pagina {display: flex; width: 60%; align-items: center; justify-content: center;}
     .pagina {color: rgb(255, 255, 255); border-radius: 15px; font-size: 40px; width: 50%; height: 25%; display: flex; align-items: center;
@@ -54,25 +77,52 @@
     </section>
         
     <section class="slide" id="slide2">
-      <h2>¿DE QUÉ TRATA?</h2>
-      <p>"Warner Bros. Studios Tour ofrece una experiencia detrás de cámaras en sets y exposiciones icónicas en Hollywood, Londres y Tokio, 
-      donde los visitantes exploran escenarios y aprenden sobre la creación de películas y series."</p>
+      <div class="cuadro"> 
+        <h2>¿DE QUÉ TRATA?</h2>
+        <p>"Proporciona información sobre los tours de los estudios Warner Bros. y permite comprar las entradas."</p>
+      </div>
+      <div class="cuadro">
+        <h2>OBJETIVO UX/UI</h2>
+        <p>"Crear una experiencia visual atractiva e intuitiva. El propósito del sitio es atraer a los visitantes con una navegación clara, 
+        permitiendo la compra de entradas y presentando información sobre los tours de forma accesible y visualmente atractiva, todo alineado 
+        con la identidad de la marca Warner Bros."</p>
+      </div>
+    </section>
+
+    <section class="slide" id="slide3">
+      <h2>TIPOGRAFÍA</h2>
+      <p>"Roboto Slab", serif"</p>
+      <h2>COLORES</h2>
+      <div class="circulos">
+        <div class="circulo-container">
+          <p class="text-above">#AFC1D6</p> 
+          <div class="circulo" id="circulo1"></div>
+        </div>
+    
+        <div class="circulo-container">
+          <p class="text-above">#F2B819</p> 
+          <div class="circulo" id="circulo2"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" id="slide4">
+      <h2>WIREFRAME</h2> 
+      <div class="slide4-images">
+        <img class="compu" src="wirecompu.png">
+        <img class="movil" src="wiremovil.png">
+      </div>
     </section>
         
-    <section class="slide" id="slide3">
+    <section class="slide" id="slide5">
       <h2>PÁGINA DE INICIO</h2>
-      <div class="slide3-images">
+      <div class="slide5-images">
         <img class="compu" src="compu.png">
         <img class="movil" src="movil.png">
       </div>
     </section>
 
-    <section class="slide" id="slide4">
-      <h2>¿DE QUE TRATA?</h2>
-      <p>hola</p>
-    </section>
-
-    <section class="slide" id="slide5">
+    <section class="slide" id="slide6">
       <div class="link-pagina">
         <a class="pagina" href="https://royordan.github.io/WARNER/">
           <h2>VISITA WARNER BROS TOUR</h2>
@@ -95,7 +145,6 @@
       function prevSlide() {currentSlide = (currentSlide - 1 + slides.length) % slides.length; showSlide(currentSlide);}
       showSlide(currentSlide);
     </script>
-  
 </body>
 </html>
 
