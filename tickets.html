@@ -27,39 +27,68 @@
     <main>
         <div>
             <h2>COMPRA TUS ENTRADAS</h2>
-            
         </div>
     </main>
-    <h2>Medios de pago</h2>
-    <div class="main-container"> 
-        <img src="tarjeta.png" alt="Tarjeta de Crédito" class="tarjeta-imagen">
-        <div class="form-container">
-            <div class="field-container">
-                <label for="name">Nombre</label>
-                <input id="name" maxlength="20" type="text">
+
+    <div class="booking-container">
+        <h4>1. Número de personas</h4>
+        <input type="number" id="participants" min="1" max="10" value="1">
+        
+        <h4>2. Selecciona la localidad</h4>
+        <select id="location">
+            <option value="us">EEUU</option>
+            <option value="uk">Londres</option>
+            <option value="jp">Japón</option>
+        </select>
+    
+        <h4>3. Selecciona la fecha</h4>
+        <input type="date" id="date">
+    
+        <h4>4. Horarios disponibles</h4>
+        <div id="schedule-container">
+            <p>Selecciona una fecha y localidad para ver los horarios.</p>
+        </div>
+
+        <h4>Entrada general = $75</h4>
+    
+        <button id="reserve-btn">Reservar</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+<h2>Medios de pago</h2>
+<div class="main-container"> 
+    <img src="tarjeta.png" alt="Tarjeta de Crédito" class="tarjeta-imagen">
+
+    <div class="form-container">
+        <div class="field-container">
+            <label for="name">Nombre</label>
+            <input id="name" maxlength="20" type="text" required>
+        </div>
+
+        <div class="field-container">
+            <label for="tarjeta">Número de Tarjeta</label>
+            <input id="tarjeta" type="text" pattern="[0-9]*" inputmode="numeric" required>
+        </div>
+
+        <div class="flex-row"> 
+            <div class="flex-item">
+                <label for="expirationdate">Expiración (mm/yy)</label>
+                <input id="expirationdate" type="text" pattern="[0-9]*" inputmode="numeric" required>
             </div>
-            <div class="field-container">
-                <label for="tarjeta">Número de Tarjeta</label>
-                <input id="tarjeta" type="text" pattern="[0-9]*" inputmode="numeric">
-            </div>
-            <div class="flex-row"> 
-                <div class="flex-item">
-                    <label for="expirationdate">Expiración (mm/yy)</label>
-                    <input id="expirationdate" type="text" pattern="[0-9]*" inputmode="numeric">
-                </div>
-                <div class="flex-item">
-                    <label for="securitycode">CVC</label>
-                    <input id="securitycode" type="text" pattern="[0-9]*" inputmode="numeric">
-                </div>
-            </div>
-            <div class="flex-row"> 
-                <label for="name" style="margin-right: 10px;">Finalizar:</label>
-                <input class="boton-enviar" type="submit" value="Pagar">
+            <div class="flex-item">
+                <label for="securitycode">CVC</label>
+                <input id="securitycode" type="text" pattern="[0-9]*" inputmode="numeric" required>
             </div>
         </div>
-    </div>
 
-    
+        <div class="flex-row"> 
+            <label for="name" style="margin-right: 10px;">Finalizar:</label>
+            <input class="boton-enviar" type="submit" value="Pagar" id="submit">
+        </div>
+    </div>
+</div>
+<script src="script.js"></script>
 <footer> 
     <div class="footer-container"></div>
         <div class="logo"><img src="logo.png"></div>
@@ -82,8 +111,6 @@
     </div>
     <div class="copy"><p>@2024 Warner Bros Studio Tour. Todos los derechos reservados.</p></div>
 </footer>
-
-
     <script>
         document.querySelector('.menu-toggle').addEventListener('click', function () 
         {document.querySelector('.navbar').classList.toggle('active');});
@@ -92,5 +119,66 @@
         function MiFuncion(){var x = document.getElementById("navegador")}
             if (x.className === " ") {x.className == "responsive";} else {x.className = " ";}
     </script>
+<script src="script.js"></script>
+<script>
+   document.addEventListener("DOMContentLoaded", function() {
+    const locationSelect = document.getElementById("location");
+    const dateInput = document.getElementById("date");
+    const scheduleContainer = document.getElementById("schedule-container");
+    const reserveButton = document.getElementById("reserve-btn");
+    const schedules = {
+        us: ["08:30 AM", "09:30 AM", "10:30 AM", "11:30 AM", "12:30 PM", "01:30 PM", "03:30 PM",],
+        uk: ["08:30 AM", "09:30 AM", "10:30 AM", "11:30 AM", "12:30 PM", "01:30 PM", "03:30 PM",],
+        jp: ["08:30 AM", "09:30 AM", "10:30 AM", "11:30 AM", "12:30 PM", "01:30 PM", "03:30 PM",]
+    };
+    function updateSchedule() {
+        const selectedLocation = locationSelect.value;
+        const selectedDate = dateInput.value;
+        if (!selectedDate) {scheduleContainer.innerHTML = "<p>Por favor, selecciona una fecha.</p>"; return;}
+        const availableTimes = schedules[selectedLocation];
+        let scheduleHtml = "<ul>";
+        availableTimes.forEach(time => {
+            scheduleHtml += `
+                <li>
+                    <input type="radio" name="schedule" id="${time}" value="${time}">
+                    <label for="${time}">${time}</label>
+                </li>`;});
+        scheduleHtml += "</ul>";
+        scheduleContainer.innerHTML = scheduleHtml;}
+    function handleReserve() {
+        const selectedSchedule = document.querySelector('input[name="schedule"]:checked');
+        if (!selectedSchedule) {alert("Por favor, selecciona un horario."); return;}
+        const numberOfParticipants = document.getElementById("participants").value;
+        const selectedLocation = locationSelect.options[locationSelect.selectedIndex].text;
+        const selectedDate = dateInput.value;
+        const selectedTime = selectedSchedule.value;
+        const fixedPrice = 75; // Precio fijo
+        const totalPrice = fixedPrice * numberOfParticipants;
+        alert(`Reserva confirmada:
+            Localidad: ${selectedLocation}
+            Fecha: ${selectedDate}
+            Hora: ${selectedTime}
+            Participantes: ${numberOfParticipants}
+            Precio por persona: $${fixedPrice}
+            Total: $${totalPrice}`)
+        ;}
+        locationSelect.addEventListener("change", updateSchedule);
+        dateInput.addEventListener("change", updateSchedule);
+        reserveButton.addEventListener("click", handleReserve);});
+</script>
+<script>
+    document.getElementById("submit").addEventListener("click", function(event) {
+    event.preventDefault(); 
+    const name = document.getElementById("name").value;
+    const tarjeta = document.getElementById("tarjeta").value;
+    const expirationDate = document.getElementById("expirationdate").value;
+    const securityCode = document.getElementById("securitycode").value;
+    if (name && tarjeta && expirationDate && securityCode) {
+        alert("Pago realizado con éxito");
+    } else {
+        alert("Por favor, complete todos los campos");
+    }});
+</script>
 </body>
 </html>
+
