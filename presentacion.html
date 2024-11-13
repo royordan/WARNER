@@ -18,11 +18,7 @@
     #slide2 {box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1)}
     .slide4-images, .slide5-images {display: flex; justify-content: center; align-items: center; gap: 20px; padding: 0 20px;}
     .slide6 {display: flex; width: 100%; height: 100%; justify-content: center;}
-    #slide4 .compu {
-  width: 50%; /* Reduje el tamaño de la imagen de la computadora */
-  height: auto; /* Mantiene la proporción */
-}
-
+    #slide4 .compu {width: 50%; height: auto; }
 
     .compu, .movil {height: auto;}
     .compu {width: 70%;}
@@ -64,6 +60,24 @@
     .prev:hover, .next:hover {background-color: transparent;}
     .prev {left: 10px;}
     .next {right: 10px;}
+
+    
+    @media screen and (max-width: 768px) {
+      #slide2 .cuadro {padding: 20px; height: auto;}
+      #slide2 .cuadro h2 {font-size: 2em;}
+      #slide2 .cuadro p {font-size: 1em; padding: 10px;}
+      #slide3 h2 {font-size: 2em;}
+      #slide3 p {font-size: 1em; padding: 0 20px;}
+      .circulos {flex-direction: column; gap: 40px;}
+      .circulo {width: 150px; height: 150px;}
+      .text-above {font-size: 16px;}
+      .text-inside {font-size: 18px;}
+      .circulo-container {display: flex; flex-direction: column; align-items: center;}
+    }
+    @media screen and (max-width: 480px) {
+      .cuadro h2 { font-size: 1.8em;}
+      .cuadro p {font-size: 0.9em;}
+    }
   </style>
 </head>
 
