@@ -24,6 +24,7 @@
         </nav>
         <button class="menu-toggle" aria-label="Toggle Menu">&#9776;</button>
     </header>
+
     <div class="slider">
         <div class="mySlides"><img src="slide1.png" style="width: 100%" alt="Slide 1"></div>
         <div class="mySlides"><img src="slide2.png" style="width: 100%" alt="Slide 2"></div>
@@ -32,6 +33,7 @@
         <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
         <button class="next" onclick="moveSlide(1)">&#10095;</button>
     </div>
+
     <main>
         <div>
             <h1> EXPLORA LA MAGIA DEL CINE EN WARNER BROS STUDIO</h1>
@@ -75,15 +77,12 @@
                 </div>
                 <p class="pais">Japón</p>
             </div>
-
         </div>
         
-
         <div>
-            <h2>COMPRA TUS ENTRADAS</h2>
-            <a href="tickets.html">ver más</a>
+            <h2>CONSEGUÍ TUS ENTRADAS</h2>
+            <a href="tickets.html">COMPRAR</a>
         </div>
-
     </main>
 
     <div class="cajacontanuncio">
@@ -111,6 +110,13 @@
             </div>
         </div>
         <div class="copy"><p>@2024 Warner Bros Studio Tour. Todos los derechos reservados.</p></div>
+        <div style="text-align: center;">
+            <a href="https://royordan.github.io/WARNER/presentacion.html"
+               style="background-color: #F2B819; color: white; border-radius: 20px; display: inline-block; padding: 15px 25px; 
+                      text-decoration: none; margin: 20px auto;">
+                PRESENTACIÓN
+            </a>
+        </div>
     </footer>
 
     <script>
@@ -131,5 +137,6 @@
             slides[slideIndex - 1].style.display = "block"; setTimeout(showSlides, 2000); }
         function moveSlide(n) {showSlides(slideIndex += n);}
     </script>
+    
 </body>
 </html>
